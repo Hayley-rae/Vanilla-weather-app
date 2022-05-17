@@ -1,0 +1,45 @@
+.weather-app {
+  max-width: 600px;
+  margin: 90px auto;
+  border: solid 1px gray;
+  border-radius: 20px;
+  padding: 20px;
+}
+.input-group {
+  width: 250px;
+}
+.leftSide {
+  text-align: center;
+  position: relative;
+  right: 30px;
+}
+#date-time {
+  position: relative;
+  top: 10px;
+}
+.conditionIcon {
+  width: 120px;
+}
+#current-temp {
+  font-size: 50px;
+}
+#current-temp,
+#conversion-links {
+  position: relative;
+  left: 25px;
+  bottom: 25px;
+}
+#conversion-links {
+  font-size: 15px;
+}
+#main-hi-lo {
+  position: relative;
+  bottom: 30px;
+}
+ul {
+  list-style-type: none;
+}
+.city {
+  font-size: 30px;
+  font-weight: bold;
+}
