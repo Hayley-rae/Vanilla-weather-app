@@ -10,13 +10,17 @@ function displayWeather(response) {
   let temp = Math.round(datapoint.main.temp);
   let humidity = datapoint.main.humidity;
   let wind = Math.round(datapoint.wind.speed);
+  let tempHi = Math.round(datapoint.main.temp_max);
+  let tempLo = Math.round(datapoint.main.temp_min);
   let iconId = datapoint.weather[0].icon;
   let iconUrl = `http://openweathermap.org/img/wn/${iconId}@2x.png`;
   cityElement.innerHTML = cityName;
   humidityElement.innerHTML = `Humidity: ${humidity}%`;
-  windElement.innerHTML = `Wind: ${wind}mph`;
+  windElement.innerHTML = `Wind: ${wind} mph`;
   tempElement.innerHTML = `${temp}º`;
   currentIcon.src = iconUrl;
+  hiLo.innerHTML = `Lo:${tempLo} | Hi:${tempHi}`;
+  console.log(response);
 }
 
 let searchForm = document.querySelector("#searchForm");
@@ -28,5 +32,6 @@ let cityElement = conditions.querySelector(".city");
 let humidityElement = conditions.querySelector(".humidity");
 let windElement = conditions.querySelector(".wind");
 let tempElement = document.querySelector("#current-temp");
+let hiLo = document.querySelector("#main-hi-lo");
 
 let currentIcon = document.getElementById("conditionIcon");
