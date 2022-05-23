@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather</title>
     <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
@@ -18,8 +22,13 @@
     <div class="container">
       <div class="weather-app">
         <form id="searchForm" action="search">
-          <input type="text" name="q" id="search-input" />
-          <input type="submit" id="submit-btn" />
+          <input
+            type="text"
+            name="q"
+            placeholder="Search City"
+            id="search-input"
+          />
+          <input type="submit" id="submit-btn" value="Search" />
         </form>
 
         <div class="row">
@@ -29,25 +38,38 @@
                 <img id="conditionIcon" src="" alt="" />
               </li>
               <li>
-                <span id="current-temp">80º</span>
+                <span id="current-temp">80</span>
                 <span id="conversion-links">
                   <small>
-                    <a id="celsius" href="">ºC</a>
+                    <button
+                      class="unit-select"
+                      onclick="convertCel()"
+                      id="celsius"
+                    >
+                      ºC
+                    </button>
                     |
-                    <a id="farenheit" href="">ºF</a>
+                    <button
+                      class="unit-select"
+                      onclick="convertFar()"
+                      id="farenheit"
+                    >
+                      ºF
+                    </button>
                   </small>
                 </span>
               </li>
               <li id="main-hi-lo">
-                <small>hi/lo</small>
+                <small></small>
               </li>
             </ul>
           </div>
           <div class="col-6 rightSide">
             <ul id="col-2">
-              <li class="city"></li>
-              <li class="humidity"></li>
-              <li class="wind"></li>
+              <li class="city">Nashville</li>
+              <li class="humidity">Humidity: 40%</li>
+              <li class="wind">Windspeed: 4</li>
+              <li class="condition-description"></li>
               <li>
                 <p></p>
               </li>
@@ -55,7 +77,9 @@
           </div>
         </div>
         <small>
-          <a href="">GitHub</a>
+          <a href="https://github.com/Hayley-rae/Vanilla-weather-app"
+            >Open Source Code</a
+          >
         </small>
       </div>
     </div>

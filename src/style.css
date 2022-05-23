@@ -1,17 +1,33 @@
+html {
+  height: 100%;
+}
+body {
+  background: linear-gradient(#bde0fe, #cdb4db);
+  background-repeat: no-repeat;
+}
 .weather-app {
+  font-family: "Montserrat", sans-serif;
+  color: #fffffc;
   max-width: 600px;
   margin: 90px auto;
-  border: solid 1px gray;
   border-radius: 20px;
   padding: 20px;
+  background: linear-gradient(#ffafcc, #ffc8dd);
+  box-shadow: 5px 5px 10px #ffafcc;
 }
-.input-group {
-  width: 250px;
+
+#search-input {
+  border-radius: 12px;
+  border: none;
 }
 .leftSide {
   text-align: center;
   position: relative;
   right: 30px;
+}
+.rightSide {
+  position: relative;
+  top: 15px;
 }
 #date-time {
   position: relative;
@@ -23,16 +39,26 @@
 #current-temp {
   font-size: 50px;
 }
-#current-temp,
-#conversion-links {
+#current-temp {
   position: relative;
   left: 25px;
   bottom: 25px;
 }
 #conversion-links {
-  font-size: 15px;
+  position: relative;
+  left: 25px;
+  bottom: 50px;
+}
+
+#farenheit,
+#celsius {
+  font-size: 13px;
+  color: azure;
+  text-decoration: none;
 }
 #main-hi-lo {
+  font-size: 13px;
+  font-weight: 300;
   position: relative;
   bottom: 30px;
 }
@@ -40,6 +66,16 @@ ul {
   list-style-type: none;
 }
 .city {
-  font-size: 30px;
+  font-size: 33px;
   font-weight: bold;
+}
+#celsius {
+  border: none;
+  background: none;
+  color: #fdffb6;
+}
+#farenheit {
+  border: none;
+  background: none;
+  color: #fdffb6;
 }
