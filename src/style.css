@@ -79,3 +79,12 @@ ul {
   background: none;
   color: #fdffb6;
 }
+.forecast-date,
+.forecast-temps {
+  text-align: center;
+}
+.forecast-icon {
+  width: 50px;
+  display: block;
+  margin: 0 auto;
+}

@@ -35,6 +35,9 @@ function displayWeather(response) {
   tempElement.innerHTML = `${temp}`;
   currentIcon.src = iconUrl;
   hiLo.innerHTML = `Lo: ${tempLo} | Hi: ${tempHi}`;
+
+  displayForecast();
+
   console.log(response);
 }
 
@@ -52,10 +55,27 @@ let writtenCondition = document.querySelector(".condition-description");
 
 let currentIcon = document.getElementById("conditionIcon");
 
-// let unitSelect = document.querySelector("#conversion-links");
-// let imperialBtn = unitSelect.querySelector("#farenheit");
-// let impId = imperialBtn.id;
-// imperialBtn.addEventListener("click", convertUnits);
-// let metricBtn = unitSelect.querySelector("#celsius");
-// let metId = metricBtn.id;
-// metricBtn.addEventListener("click", convertUnits);
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Sat", "Sun", "Mon", "Tue"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+              <div class="forecast-date">${day}</div>
+              <img
+                class="forecast-icon"
+                src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
+                alt=""
+              />
+              <div class="forecast-temps">
+                <span class="forecast-hi">80º</span>
+                <span class="forecast-lo">68º</span>
+              </div>
+            </div>`;
+  });
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
