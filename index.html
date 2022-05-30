@@ -16,6 +16,10 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/style.css" />
+    <script
+      src="https://kit.fontawesome.com/835a3ccae8.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
@@ -28,7 +32,9 @@
             placeholder="Search City"
             id="search-input"
           />
-          <input type="submit" id="submit-btn" value="Search" />
+          <button id="submit-btn" type="submit">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
         </form>
 
         <div class="row">
@@ -38,26 +44,9 @@
                 <img id="conditionIcon" src="" alt="" />
               </li>
               <li>
-                <span id="current-temp">80</span>
-                <span id="conversion-links">
-                  <small>
-                    <button
-                      class="unit-select"
-                      onclick="convertCel()"
-                      id="celsius"
-                    >
-                      ºC
-                    </button>
-                    |
-                    <button
-                      class="unit-select"
-                      onclick="convertFar()"
-                      id="farenheit"
-                    >
-                      ºF
-                    </button>
-                  </small>
-                </span>
+                <div class="currentTemp">
+                  <span id="current-temp"></span><span id="temp-unit"></span>
+                </div>
               </li>
               <li id="main-hi-lo">
                 <small></small>
@@ -67,6 +56,7 @@
           <div class="col-6 rightSide">
             <ul id="col-2">
               <li class="city">Nashville</li>
+              <li class="day-time"></li>
               <li class="humidity">Humidity: 40%</li>
               <li class="wind">Windspeed: 4</li>
               <li class="condition-description"></li>
@@ -77,12 +67,14 @@
           </div>
         </div>
         <div class="weather-forecast" id="forecast"></div>
-
-        <small>
-          <a href="https://github.com/Hayley-rae/Vanilla-weather-app"
-            >Open Source Code</a
+        <div class="source-link">
+          <a
+            id="github-link"
+            href="https://github.com/Hayley-rae/Vanilla-weather-app"
           >
-        </small>
+            Open Source Code
+          </a>
+        </div>
       </div>
     </div>
   </body>

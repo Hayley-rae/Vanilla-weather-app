@@ -11,14 +11,26 @@ body {
   max-width: 600px;
   margin: 90px auto;
   border-radius: 20px;
-  padding: 20px;
+  padding: 20px 20px 5px;
   background: linear-gradient(#ffafcc, #ffc8dd);
   box-shadow: 5px 5px 10px #ffafcc;
 }
 
 #search-input {
+  background-color: #fffffc80;
+  text-indent: 8px;
   border-radius: 12px;
   border: none;
+}
+
+#submit-btn {
+  border: none;
+  border-radius: 15px;
+  background: none;
+  color: white;
+}
+#submit-btn:hover {
+  color: #fffffc80;
 }
 .leftSide {
   text-align: center;
@@ -29,33 +41,32 @@ body {
   position: relative;
   top: 15px;
 }
-#date-time {
+.day-time {
   position: relative;
-  top: 10px;
+  bottom: 10px;
+  left: 1px;
+  color: purple;
+  opacity: 0.4;
+  font-size: 14px;
 }
+
 .conditionIcon {
   width: 120px;
 }
 #current-temp {
   font-size: 50px;
-}
-#current-temp {
   position: relative;
-  left: 25px;
+  left: 10px;
   bottom: 25px;
 }
-#conversion-links {
+
+#temp-unit {
   position: relative;
-  left: 25px;
+  left: 10px;
   bottom: 50px;
+  color: #fdffb6;
 }
 
-#farenheit,
-#celsius {
-  font-size: 13px;
-  color: azure;
-  text-decoration: none;
-}
 #main-hi-lo {
   font-size: 13px;
   font-weight: 300;
@@ -69,22 +80,31 @@ ul {
   font-size: 33px;
   font-weight: bold;
 }
-#celsius {
-  border: none;
-  background: none;
-  color: #fdffb6;
-}
-#farenheit {
-  border: none;
-  background: none;
-  color: #fdffb6;
-}
+
 .forecast-date,
 .forecast-temps {
   text-align: center;
 }
+.forecast-lo {
+  opacity: 0.5;
+}
+.forecast-date {
+  color: #fdffb6;
+  opacity: 0.8;
+  font-weight: bold;
+}
 .forecast-icon {
-  width: 50px;
+  width: 65px;
   display: block;
   margin: 0 auto;
+}
+#forecast {
+  background-color: #cdb4db80;
+  border-radius: 10px;
+}
+
+#github-link {
+  color: #fdffb6;
+  text-decoration: none;
+  font-size: 12px;
 }
